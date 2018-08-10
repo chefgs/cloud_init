@@ -5,7 +5,7 @@
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
 # Set a hostname on operating system level
-hostname node[host_name]
+hostname "#{node[host_name]}"
 
 # Install a package called “my-monitoring-agent”
 # Assume that the package repository providing that package is already configured
