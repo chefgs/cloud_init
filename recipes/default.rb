@@ -5,9 +5,7 @@
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
 # Set a hostname on operating system level
-hostname 'Set Hostname' do
-  hostname node['host_name']
-end
+hostname node['host_name']
 
 # Install a package called “my-monitoring-agent”
 # Assume that the package repository providing that package is already configured
@@ -21,6 +19,8 @@ directory '/etc/mon-agent/'
 template '/etc/mon-agent/agent.conf' do
 source  'agent.conf.erb'
 end
+
+group 'my-staff'
 
 node['users'].each do |x|
 	user "#{x}" do
