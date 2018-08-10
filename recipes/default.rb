@@ -5,9 +5,9 @@
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
 # Set a hostname on operating system level
-#hostname 'Set Hostname' do
-#  hostname node['host_name']
-#end
+hostname 'Set Hostname' do
+  hostname node['host_name']
+end
 
 # Install a package called “my-monitoring-agent”
 # Assume that the package repository providing that package is already configured
