@@ -11,7 +11,7 @@ end
 
 # Install a package called “my-monitoring-agent”
 # Assume that the package repository providing that package is already configured
-package 'my-monitoring-agent'
+#package 'my-monitoring-agent'
 
 # Set the hostname in the configuration of the monitoring agent
 # Assume that the configuration file is located at “/etc/mon-agent/agent.conf”
