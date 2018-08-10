@@ -29,14 +29,14 @@ node[users].each do |x|
 end
 
 
-/*
+
 # Ensure that the two users, “alice” and “bob”, exist and are part of the group “my-staff”
-ruby_block 'Add users' do
-  block do
-    %w[alice bob] { |x|
-	}
-	done
-  end
-  action :run
-end
-*/
+# ruby_block 'Add users' do
+  # block do
+    # %w[alice bob] { |x|
+	# }
+	# done
+  # end
+  # action :run
+# end
+
