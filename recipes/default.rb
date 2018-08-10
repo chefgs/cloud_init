@@ -22,7 +22,7 @@ template '/etc/mon-agent/agent.conf' do
 source  'agent.conf.erb'
 end
 
-node[users].each do |x|
+node['users'].each do |x|
 	user "#{x}" do
 	  manage_home true
 	  gid 'my-staff'
