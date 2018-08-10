@@ -1,5 +1,5 @@
 #
-# Cookbook:: samples
+# Cookbook:: cloud_init
 # Recipe:: default
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
@@ -9,7 +9,10 @@ hostname node['host_name']
 
 # Install a package called “my-monitoring-agent”
 # Assume that the package repository providing that package is already configured
-#package 'my-monitoring-agent'
+rpm_package 'my-monitoring-agent' do
+  source '/root/rpmbuild/RPMS/noarch/my-monitoring-agent-1.0-1.noarch.rpm'
+  only_if { File::exists?('/root/rpmbuild/RPMS/noarch/my-monitoring-agent-1.0-1.noarch.rpm') }
+end
 
 # Set the hostname in the configuration of the monitoring agent
 # Assume that the configuration file is located at “/etc/mon-agent/agent.conf”
@@ -22,6 +25,7 @@ end
 
 group 'my-staff'
 
+# Ensure that the two users, “alice” and “bob”, exist and are part of the group “my-staff”
 node['users'].each do |x|
 	user "#{x}" do
 	  manage_home true
@@ -29,14 +33,3 @@ node['users'].each do |x|
 	  home "/home/#{x}"
 	end
 end
-
-# Ensure that the two users, “alice” and “bob”, exist and are part of the group “my-staff”
-# ruby_block 'Add users' do
-  # block do
-    # %w[alice bob] { |x|
-	# }
-	# done
-  # end
-  # action :run
-# end
-
