@@ -10,8 +10,8 @@ hostname node['host_name']
 # Install a package called “my-monitoring-agent”
 # Assume that the package repository providing that package is already configured
 rpm_package 'my-monitoring-agent' do
-  source '/root/rpmbuild/RPMS/noarch/my-monitoring-agent-1.0-1.noarch.rpm'
-  only_if { File::exists?('/root/rpmbuild/RPMS/noarch/my-monitoring-agent-1.0-1.noarch.rpm') }
+  source node['rpm_path']
+  only_if { File::exists?( node['rpm_path'] ) }
 end
 
 # Set the hostname in the configuration of the monitoring agent
