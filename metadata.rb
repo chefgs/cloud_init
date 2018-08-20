@@ -1,6 +1,6 @@
 name 'cloud_init'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Saravanan Gnanaguru'
+maintainer_email 'g.gsaravanan@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures cloud_init'
 long_description 'Installs/Configures cloud_init'
