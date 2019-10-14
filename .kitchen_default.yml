@@ -1,26 +1,20 @@
 ---
 driver:
-  name: ec2
-  aws_ssh_key_id: gs-aws-dev
-  region: us-west-2
+  name: vagrant
 
 provisioner:
   name: chef_zero
-  require_chef_omnibus: true
-  product_name: chef
+  # You may wish to disable always updating cookbooks in CI or other testing environments.
+  # For example:
+  #   always_update_cookbooks: <%= !ENV['CI'] %>
   always_update_cookbooks: true
 
 verifier:
   name: inspec
 
-transport:
-  ssh_key: ~/.ssh/gs-aws-dev
-  connection_timeout: 10
-  connection_retries: 3
-  username: ec2-user
-
 platforms:
   - name: ubuntu-16.04
+  - name: centos-7
 
 suites:
   - name: default
