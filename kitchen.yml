@@ -1,7 +1,7 @@
 ---
 driver:
   name: ec2
-  aws_ssh_key_id: gs-aws-dev
+  aws_ssh_key_id: gs-ubuntu-key
   region: us-west-2
 
 provisioner:
@@ -14,10 +14,10 @@ verifier:
   name: inspec
 
 transport:
-  ssh_key: ~/.ssh/gs-aws-dev
+  # ssh_key: ~/.ssh/gs-aws-dev
   connection_timeout: 10
   connection_retries: 3
-  username: ec2-user
+  username: ubuntu
 
 platforms:
   - name: ubuntu-16.04
