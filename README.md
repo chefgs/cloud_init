@@ -4,7 +4,7 @@ Expecting the readers should have basic understanding Chef cookbooks and related
 
 ## Target audience for this demo
 Chef developers or teams looking to implement Chef in-spec script
-Developers/testers looking to implement Chef Test Kitchen in real-time using AWS EC2 VM.
+Developers/testers looking to implement Chef Test Kitchen in real-time using `AWS EC2 VM`.
 
 ## Objective:
 ### Cookbook in this repo, does following steps
@@ -14,6 +14,7 @@ Developers/testers looking to implement Chef Test Kitchen in real-time using AWS
 - Ensure that the two users, `alice` and `bob`, exist and are part of the group `my-staff`
 
 It has inspec test cases to verify the cookbook functionality.
+
 The inspec test will be run inside a AWS EC2 VM, triggered via Chef Test Kitchen.
 
 ## Pre-Requisites:
@@ -23,11 +24,11 @@ AWS (.pem) keypair should be pre-generated
 ## Workstation triggering the "Test Kitchen" should have following setup
 - Transfer the pem file into `~/.ssh path` (file should have 600 mode).
 
-- Install `ChefDK`. If testing things other than Chef cookbooks, please consult your driver's documentation for information on what to install.
+- Install [`ChefDK`](https://downloads.chef.io/chefdk/). 
 
-- Install the AWS command line tools.
+- Install the [AWS command line tools](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
 
-- Run `aws configure`. This will set up your AWS credentials for both the AWS CLI tools and kitchen-ec2.
+- Run [`aws configure`](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html#cli-quick-configuration). This will set up your AWS credentials for both the AWS CLI tools and kitchen-ec2.
 
 - Checkout the `cloud_init` cookbook repo
 
@@ -64,4 +65,5 @@ In general, use the `kitchen test` subcommand to verify the end-to-end quality o
 
 Use the subcommands `kitchen converge` and `kitchen verify` during the normal the day-to-day development of a cookbook
 
-
+## Further Reference
+Kitchen EC2 [Github](https://github.com/test-kitchen/kitchen-ec2)
