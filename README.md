@@ -1,4 +1,7 @@
-# Chef Test Kitchen Demo using AWS EC2 Instance
+# Cloud Init Cookbook
+This cookbook has been used in [cloud_init_sample]('https://github.com/chefgs/cloud_init_sample') repo.
+
+## Chef Test Kitchen Demo using AWS EC2 Instance
 ## Introduction:
 Expecting the readers should have basic understanding Chef cookbooks and related development experience.
 
