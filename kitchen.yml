@@ -14,10 +14,10 @@ verifier:
   name: inspec
 
 transport:
-  # ssh_key: ~/.ssh/gs-aws-dev
-  connection_timeout: 10
-  connection_retries: 3
   username: ubuntu
+  ssh_key: ~/.ssh/gs-ubuntu-key.pem
+  # connection_timeout: 10
+  # connection_retries: 3
 
 platforms:
   - name: ubuntu-16.04
