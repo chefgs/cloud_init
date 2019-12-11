@@ -21,8 +21,9 @@ It has inspec test cases to verify the cookbook functionality.
 The inspec test will be run inside a AWS EC2 VM, triggered via Chef Test Kitchen.
 
 ## Pre-Requisites:
-AWS Cloud Account
-AWS (.pem) keypair should be pre-generated 
+- AWS Cloud Account
+
+- AWS (.pem) keypair should be pre-generated and available already (Value to be used in kitchen.yml driver section)
 
 ## Workstation triggering the "Test Kitchen" should have following setup
 - Transfer the pem file into `~/.ssh path` (file should have 600 mode).
