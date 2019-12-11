@@ -51,19 +51,19 @@ transport:
 Note: Since we are creating Ubuntu instance, user-name should be "ubuntu", otherwise use "ec2-user"
 
 ## Now the cookbook is ready to run the following chef kitchen commands
-Unit test command: `chef exec rspec spec/`
+ - Unit test command: `chef exec rspec spec/`
 
-Linting and syntax check: `chef exec cookstyle`
+ - Linting and syntax check: `chef exec cookstyle`
 
-Create test vm : `chef exec kitchen create`
+ - Create test vm : `chef exec kitchen create`
 
-Execute cookbook in test vm: `chef exec kitchen converge`
+ - Execute cookbook in test vm: `chef exec kitchen converge`
 
-Run the inspec test cases in test vm: `chef exec kitchen verify`
+ - Run the inspec test cases in test vm: `chef exec kitchen verify`
 
-Cleanup the test vm to save costs: `chef exec kitchen destroy`
+ - Cleanup the test vm to save costs: `chef exec kitchen destroy`
 
-End-to-end test run, which includes all the above commands: `chef exec kitchen test`
+ - End-to-end test run, which includes all the above commands: `chef exec kitchen test`
 
 In general, use the `kitchen test` subcommand to verify the end-to-end quality of a cookbook.
 
